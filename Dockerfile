@@ -1,8 +1,7 @@
-# Use a base Java image
-FROM openjdk:17.0.2-jdk-slim-bullseye
-
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
-COPY your-application.jar /app/app.jar
+COPY target/*.jar /app/app.jar
 EXPOSE 8080
-CMD ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]
+
 
