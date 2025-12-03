@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Projects</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+
+<header class="navbar">
+    <div class="nav-left">
+        <span class="logo-dot"></span>
+        <span class="logo-text">My DevOps Portfolio</span>
+    </div>
+    <nav class="nav-links">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/projects}" class="active">Projects</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Projects</h1>
+    <p>Some sample projects from my Spring Boot & DevOps practice.</p>
+</section>
+
+<main class="main-container">
+    <section class="section">
+        <h2 class="section-title">Sample Projects</h2>
+
+        <div class="card-grid">
+            <article class="card">
+                <h3>Static Site with GitHub Actions</h3>
+                <p>
+                    A colorful HTML/CSS website deployed automatically using
+                    <strong>GitHub Actions</strong> and <strong>GitHub Pages</strong>.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Spring Boot Demo API</h3>
+                <p>
+                    REST API built with <strong>Spring Boot</strong> and packaged
+                    as a <strong>Maven JAR</strong>.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Dockerized Application</h3>
+                <p>
+                    Java app built with Maven, containerized with <strong>Docker</strong>,
+                    and ready to run on any server.
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    © 2025 • My DevOps Portfolio • Projects Page
+</footer>
+
+</body>
+</html>
+

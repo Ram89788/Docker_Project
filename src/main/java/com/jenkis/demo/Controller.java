@@ -7,10 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 @org.springframework.stereotype.Controller
 public class Controller {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
-        // This returns the "home.html" page in the "resources/templates" folder
-        return "homepage";
+        return "homepage";  // homepage.html
     }
 
+    @GetMapping("/home")
+    public String goHome() {
+        return "homepage";  // optional
+    }
+
+    @GetMapping("/projects")
+    public String projects() {
+        return "projects";  // projects.html
+    }
 }

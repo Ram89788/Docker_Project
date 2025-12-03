@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<body style="background-color:powderblue;">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Home</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+<header class="navbar">
+    <div class="nav-left">
+        <span class="logo-dot"></span>
+        <span class="logo-text">My DevOps Portfolio</span>
+    </div>
+    <nav class="nav-links">
+        <a th:href="@{/}" class="active">Home</a>
+        <a th:href="@{/projects}">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-<h1>This is a homepage</h1>
-<p>This is made for devops lab</p>
-<p1>I do some change here</p1>
+<section class="hero fade-up">
+    <div class="hero-inner">
+        <p class="tag">🚀 DevOps • Java • Spring Boot</p>
+        <h1>Hi, I’m a <span>DevOps & Java Enthusiast</span></h1>
+        <p class="subtitle">
+            This mini portfolio is built with <strong>Spring Boot</strong>,
+            <strong>Maven</strong>, <strong>Thymeleaf</strong>, and simple
+            <strong>HTML &amp; CSS</strong>. It’s perfect for demos, hackathons,
+            and learning DevOps workflows.
+        </p>
+        <div class="hero-buttons">
+            <a th:href="@{/projects}" class="btn primary">View My Projects</a>
+            <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+    </div>
+</section>
 
+<main class="main-container">
+    <!-- ABOUT CARDS -->
+    <section class="section fade-up delay-1">
+        <h2 class="section-title">About Me</h2>
+        <div class="card-grid">
+            <article class="card">
+                <h3>Who am I?</h3>
+                <p>
+                    A developer who loves <strong>Java</strong>, <strong>Spring Boot</strong>,
+                    and <strong>DevOps tools</strong> like Git, GitHub Actions, Docker, and AWS.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>What I’m learning</h3>
+                <ul>
+                    <li>DevOps pipelines (CI/CD)</li>
+                    <li>Maven build &amp; JAR packaging</li>
+                    <li>Static + dynamic app deployments</li>
+                    <li>Cloud basics with AWS EC2</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h3>Goals</h3>
+                <p>
+                    Build, automate, and deploy real-world applications –
+                    and help students learn DevOps in a simple way.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section fade-up delay-2">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-card">
+            <p>Want to connect for learning, hackathons, or projects?</p>
+            <p class="contact-email">📧 demo.email@example.com</p>
+            <p class="contact-note">You can replace this section with a real form later.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    © 2025 • My DevOps Portfolio • Built with ❤️ using Spring Boot &amp; Thymeleaf
+</footer>
 </body>
 </html>
